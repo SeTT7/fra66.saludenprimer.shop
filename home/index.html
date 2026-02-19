@@ -1,107 +1,228 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exclusive Content</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Completo de Paisagismo Digital</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #051428;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .image-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .curso-imagem {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            font-weight: 600;
-        }
-        
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .btn {
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            padding: 16px 32px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn:hover {
-            background-color: #e91e63;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 22px;
-            }
-            
-            p {
-                font-size: 15px;
-            }
-        }
-    </style>
+<style>
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* PLAYER CONTAINER */
+.midas-cta-container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== SALES SECTION ===== */
+.sales-section{
+  padding:60px 20px;
+  background:#111; /* fundo mais escuro */
+  color:#fff; /* textos brancos */
+}
+
+.sales-area{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.sales-title{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:30px;
+  color:#fff;
+}
+
+.supplies-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-bottom:40px;
+}
+
+.supply-card{
+  background:#1c1c1c; /* cinza escuro */
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.4);
+  position:relative;
+  transition:0.3s;
+  color:#fff; /* textos brancos dentro do card */
+}
+
+.supply-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+.supply-card.popular{
+  border:2px solid #62baea;
+}
+
+.pop-badge{
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#62baea;
+  color:#fff;
+  padding:5px 15px;
+  font-size:13px;
+  font-weight:600;
+  border-radius:20px;
+}
+
+.prod-title{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.prod-sub{
+  font-size:14px;
+  margin-bottom:15px;
+  color:#ccc;
+}
+
+.pack-img{
+  max-width:140px;
+  margin:10px auto 15px;
+  display:block;
+}
+
+.price-strike{
+  text-decoration:line-through;
+  color:#888;
+  font-size:14px;
+}
+
+.price-main{
+  font-size:26px;
+  font-weight:700;
+  margin:5px 0;
+}
+
+.price-per{
+  font-size:14px;
+  color:#ccc;
+}
+
+.save-label{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  font-weight:600;
+  color:#4cd964;
+}
+
+/* BOTÃO AGORA AZUL */
+.btn-buy{
+  display:block;
+  background:#007bff;
+  color:#fff;
+  padding:12px;
+  border-radius:8px;
+  font-weight:600;
+  margin-top:10px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn-buy:hover{
+  background:#0069d9;
+}
+
+.ship-txt{
+  display:block;
+  margin-top:10px;
+  font-size:13px;
+  font-weight:600;
+  color:#4cd964;
+}
+
+.cards-row{
+  max-width:180px;
+  margin-top:10px;
+}
+
+@media(max-width:1024px){
+  .supplies-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .supplies-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="image-container">
-            <img src="img/3.jpg" alt="Curso de Paisagismo Digital" class="curso-imagem">
-        </div>
-        
-        <h1>Cours Complet de Bijouterie Numérique</h1>
-        
-        <p>Cours complet du niveau basique à avancé de création et montage de bijouteries, apprenez dès maintenant et commencez à gagner un revenu supplémentaire avec vos bijouteries.</p>
-        
-        <button class="btn" onclick="window.location.href='https://fr55.lifegoodfr.online/email'">Quero Me Inscrever</button>
-    </div>
+
+<div class="midas-cta-container">
+<vturb-smartplayer id="ab-69945b272b9fb21ea3b79158" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
+</div>
+
+<!-- ===== SALES SECTION ===== -->
+<section class="sales-section">
+<div class="sales-area">
+
+<h2 class="sales-title">Choisissez votre pack d'approvisionnement</h2>
+
+<div class="supplies-grid">
+
+<article class="supply-card popular">
+<div class="pop-badge">Le Choix des Médecins</div>
+<div class="prod-title">6 Bouteilles</div>
+<div class="prod-sub">Approvisionnement 180 jours</div>
+<img src="https://cdn.amazingslimfit.com/vigueur%206.png" class="pack-img">
+<div class="price-strike">€768</div>
+<div class="price-main">€294</div>
+<div class="price-per">€49 par bouteille</div>
+<span class="save-label">VOUS ÉCONOMISEZ €474</span>
+<a href="https://google.com.br" class="btn-buy">Ajouter au panier</a>
+<span class="ship-txt">LIVRAISON GRATUITE</span>
+</article>
+
+<article class="supply-card">
+<div class="prod-title">3 Bouteilles</div>
+<div class="prod-sub">Approvisionnement 90 jours</div>
+<img src="https://cdn.amazingslimfit.com/vigueur%203.png" class="pack-img">
+<div class="price-strike">€384</div>
+<div class="price-main">€207</div>
+<div class="price-per">€69 par bouteille</div>
+<span class="save-label">VOUS ÉCONOMISEZ €177</span>
+<a href="https://google.com.br" class="btn-buy">Ajouter au panier</a>
+<span class="ship-txt">LIVRAISON GRATUITE</span>
+</article>
+
+<article class="supply-card">
+<div class="prod-title">2 Bouteilles</div>
+<div class="prod-sub">Approvisionnement 60 jours</div>
+<img src="https://cdn.amazingslimfit.com/vigueur%202.png" class="pack-img">
+<div class="price-strike">€394</div>
+<div class="price-main">€158</div>
+<div class="price-per">€79 par bouteille</div>
+<span class="save-label">VOUS ÉCONOMISEZ €236</span>
+<a href="https://google.com.br" class="btn-buy">Ajouter au panier</a>
+<span class="ship-txt">+ Frais de livraison réduits</span>
+</article>
+
+</div>
+
+</div>
+</section>
+
 </body>
 </html>
