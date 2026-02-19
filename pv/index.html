@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- TikTok Pixel Code Start -->
+    <!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -26,6 +26,168 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exclusive Content</title>
     <style>
+
+
+        body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* PLAYER CONTAINER */
+.midas-cta-container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== SALES SECTION ===== */
+.sales-section{
+  padding:60px 20px;
+  background:#1c1c1c;
+  color:#fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+}
+
+.sales-area{
+  display: none;
+}
+
+.sales-area{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.sales-title{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+.supplies-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-bottom:40px;
+}
+
+.supply-card{
+  background:#2c2c2c; /* Card cinza escuro */
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  position:relative;
+  transition:0.3s;
+  color:#fff;
+}
+
+.supply-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.supply-card.popular{
+  border:2px solid #62baea;
+}
+
+.pop-badge{
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#62baea;
+  color:#fff;
+  padding:5px 15px;
+  font-size:13px;
+  font-weight:600;
+  border-radius:20px;
+}
+
+.prod-title{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.prod-sub{
+  font-size:14px;
+  margin-bottom:15px;
+  color:#ccc;
+}
+
+.pack-img{
+  max-width:140px;
+  margin:10px auto 15px;
+  display:block;
+}
+
+.price-strike{
+  text-decoration:line-through;
+  color:#999;
+  font-size:14px;
+}
+
+.price-main{
+  font-size:26px;
+  font-weight:700;
+  margin:5px 0;
+}
+
+.price-per{
+  font-size:14px;
+  color:#ccc;
+}
+
+.save-label{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  font-weight:600;
+  color:#1e7e34;
+}
+
+.btn-buy{
+  display:block;
+  background:#007bff; /* Azul */
+  color:#fff;
+  padding:12px;
+  border-radius:8px;
+  font-weight:600;
+  margin-top:10px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn-buy:hover{
+  background:#0056b3; /* Azul mais escuro */
+}
+
+.ship-txt{
+  display:block;
+  margin-top:10px;
+  font-size:13px;
+  font-weight:600;
+  color:#28a745;
+}
+
+@media(max-width:1024px){
+  .supplies-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .supplies-grid{
+    grid-template-columns:1fr;
+  }
+}
+
         /* Fundo preto na página */
         body {
             background-color: #000; /* Fundo preto */
@@ -110,6 +272,51 @@ transform: scale(1.2);
 animation: pulse 1s infinite forwards alternate-reverse;
 }
 </style>
+        <div class="sales-area">
+  <h2 class="sales-title">Wählen Sie Ihr Versorgungspaket</h2>
+
+  <div class="supplies-grid">
+
+    <article class="supply-card popular">
+      <div class="pop-badge">Ärztliche Empfehlung</div>
+      <div class="prod-title">6 Flaschen</div>
+      <div class="prod-sub">Versorgung für 180 Tage</div>
+      <img src="mockups/6.png" class="pack-img">
+      <div class="price-strike">€768</div>
+      <div class="price-main">€294</div>
+      <div class="price-per">€49 pro Flasche</div>
+      <span class="save-label">Sie sparen €474</span>
+      <a href="https://www.checkout-ds24.com/product/652154?=undefined&aff=set7777" class="btn-buy">In den Warenkorb</a>
+      <span class="ship-txt">KOSTENLOSER VERSAND</span>
+    </article>
+
+    <article class="supply-card">
+      <div class="prod-title">3 Flaschen</div>
+      <div class="prod-sub">Versorgung für 90 Tage</div>
+      <img src="mockups/3.png" class="pack-img">
+      <div class="price-strike">€384</div>
+      <div class="price-main">€207</div>
+      <div class="price-per">€69 pro Flasche</div>
+      <span class="save-label">Sie sparen €177</span>
+      <a href="https://www.checkout-ds24.com/product/652153?=undefined&aff=set7777" class="btn-buy">In den Warenkorb</a>
+      <span class="ship-txt">KOSTENLOSER VERSAND</span>
+    </article>
+
+    <article class="supply-card">
+      <div class="prod-title">2 Flaschen</div>
+      <div class="prod-sub">Versorgung für 60 Tage</div>
+      <img src="mockups/2.png" class="pack-img">
+      <div class="price-strike">€394</div>
+      <div class="price-main">€158</div>
+      <div class="price-per">€79 pro Flasche</div>
+      <span class="save-label">Sie sparen €236</span>
+      <a href="https://www.checkout-ds24.com/product/652150?=undefined&aff=set7777" class="btn-buy">In den Warenkorb</a>
+      <span class="ship-txt">+ Versandkosten reduziert</span>
+    </article>
+
+  </div>
+</div>
+
 
     
     </div>
@@ -184,12 +391,34 @@ document.addEventListener(
 </script>
 
 
+<script>
+setTimeout(function() {
+  var section = document.querySelector('.sales-area');
+  if(section){
+    section.style.display = 'block';
+  }
+}, 2217000); // 36 minutos e 57 segundos
+</script>
+
+
+
+
+
 
 
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
